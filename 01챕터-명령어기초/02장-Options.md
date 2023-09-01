@@ -37,3 +37,19 @@ sort colors.txt --reverse --unique // 2개이상 길게 써주는 옵션을 사�
 
 sort colors.txt -ru // u는 unique의 약자로 중복없이 정렬합니다.
 ```
+
+## 📌Options with Parameters (매개변수를 필요로 하는 옵션들)
+
+일부 옵션의 경우에 값을 전달해줘야 하는 경우가 있습니다.
+
+```bash
+ncal -A 1 // 현재 달부터 한 달 뒤까지 출력합니다.
+```
+
+```bash
+ncal -B2 // 현재 달부터 두 달 전까지 출력합니다. B와 숫자 사이에는 공백은 써도 되고 안써도 됩니다.
+```
+
+```bash
+ncal october 1996 -A1 -B1
+```
