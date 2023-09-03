@@ -81,3 +81,50 @@ DESCRIPTION
 
      -j      Display Julian days (days one-based, numbered from January 1).
 ```
+
+#### ✅ Manual Section
+
+> 사실 메뉴얼에는 총 8개의 다른 섹션들이 있습니다. 유저 커멘드는 그 일부일 뿐입니다.
+
+```bash
+       1   Executable programs or shell commands // 자주 보게 됩니다.
+       2   System calls (functions provided by the kernel)
+       3   Library calls (functions within program libraries)
+       4   Special files (usually found in /dev)
+       5   File formats and conventions, e.g. /etc/passwd // 자주 보게 됩니다.
+       6   Games
+       7   Miscellaneous   (including   macro  packages  and  conventions),  e.g.  man(7),
+           groff(7), man-pages(7)
+       8   System administration commands (usually only for root)
+       9   Kernel routines [Non standard]
+```
+
+예시를 들어보겠습니다.
+
+```bash
+man -k passwd // -k는 키워드를 통해 찾는 옵션이고, passwd는 유저의 패스워드를 의미합니다.
+```
+
+검색 결과는 아래와 같습니다.
+
+```bash
+chgpasswd (8)        - update group passwords in batch mode
+chpasswd (8)         - update passwords in batch mode
+gpasswd (1)          - administer /etc/group and /etc/gshadow
+grub-mkpasswd-pbkdf2 (1) - generate hashed password for GRUB
+ldappasswd (1)       - change the password of an LDAP entry
+openssl-passwd (1ssl) - compute password hashes
+pam_localuser (8)    - require users to be listed in /etc/passwd
+passwd (1)           - change user password
+passwd (1ssl)        - OpenSSL application commands
+passwd (5)           - the password file
+update-passwd (8)    - safely update /etc/passwd, /etc/shadow and /etc/group
+```
+
+위의 내용을 보면 `passwd`라는 같은 이름으로 3개의 섹션들이 있는 것을 볼 수 있습니다.
+
+만약 `passwd (5)`에 접근한다고 하면 아래와 같이 입력하면 됩니다.
+
+```bash
+man 5 passwd
+```
